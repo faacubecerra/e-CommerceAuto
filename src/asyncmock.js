@@ -18,7 +18,7 @@ const products = [
         price: 40000,
         img: logobmw,
         stock: 5,
-        category: 'Aviones',
+        category: 'Auto',
         }
     ]
 

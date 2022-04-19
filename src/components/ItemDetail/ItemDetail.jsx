@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getProducts } from "../../asyncmock"
+import { Link } from "react-router-dom"
 import '../Cart/Cart'
+import Cart from "../Cart/Cart"
 
 const ItemDetail = () => {
 
@@ -25,6 +27,10 @@ const ItemDetail = () => {
             <div>{autoView?.price}</div>
             <div>{autoView?.category}</div>
             <div>{autoView?.description}</div>
+            <Cart stock={autoView?.stock} initial={1}  />
+            <Link to= "/cart">
+                <button>TERMINAR COMPRA</button>
+            </Link>
         </div>
     )
 }

@@ -21,7 +21,7 @@ const NavBar = () => {
                 <p>ACCESORIOS</p>
               </Link>
             </div>
-            <div>
+            <div className="button-cart-conteiner">
               <Link to="/cart">
                 CART 5
               </Link>
