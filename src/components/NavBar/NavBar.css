@@ -1,0 +1,12 @@
+.navbar-container {
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
