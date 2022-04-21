@@ -3,10 +3,27 @@
     background-color: black;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
+    height: 6rem;
+}
+.logojdmmaniac{
+    height: 6rem;
 }
 .buttons-container {
+    background-color: red;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     width: 20%;
+}
+.button-cart-conteiner{
+    display: flex;
+    background-color: red;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 10px;
+}
+.logocart{
+    height: 3rem;
 }
