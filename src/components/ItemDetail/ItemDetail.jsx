@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getProducts } from "../../asyncmock"
 import { Link } from "react-router-dom"
-import '../Cart/Cart'
-import Cart from "../Cart/Cart"
+import '../ItemCount/ItemCount'
+import Cart from "../ItemCount/ItemCount"
 
 const ItemDetail = () => {
 

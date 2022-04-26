@@ -1,34 +1,18 @@
-import React, {useState} from "react"
+import {useCart} from "../CartContext/CartContext"
+import ListCart from "../ListCart/ListCart"
 
-const Cart = ({stock, initial, title}) => {
+const Cart = ()=>{
 
-    const [count, setCount] = useState(0)
-
-    const increase = () => {
-        if(count < stock){
-            setCount(count+1)
-        }
-        
-    }
-
-    const decrease = () => {
-        if(count > initial) {
-            setCount(count-1)
-        }
-    }
-
-    const onAdd = () => {
-        console.log(`¡${count} ${title} agregados al carro con éxito!`)
-    }
-
+    const {cartProducts} = useCart()
+    
     return(
         <div>
-            <button onClick={increase}>+</button>
-            <div>{count}</div>
-            <button onClick={decrease}>-</button>
-            <button onClick={onAdd}>AGREGAR AL CARRITO</button>
+            {
+                cartProducts.map(elem => <ListCart title={elem.title} description={elem.description} price={elem.price} count={elem.count}/>)
+            }
+            
         </div>
     )
 }
 
-export default Cart
+export default Cart;

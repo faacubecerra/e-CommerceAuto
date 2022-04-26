@@ -1,15 +1,15 @@
 import React from "react"
-import Cart from "../Cart/Cart"
+import ItemCount from "../ItemCount/ItemCount"
 import {Link} from "react-router-dom"
 
-const Item = ({title, price, img, stock, category}) => {
+const Item = ({title, price, img, stock, category, description}) => {
     
     return(
         <div>
             <Link to={`${category}/${title.replace(" ", "-")}`}>
                 <img src={img}></img>
             </Link>
-            <Cart stock={stock} initial={1} title={title}/>
+            <ItemCount stock={stock} initial={1} title={title} price={price} description={description}/>
             <div>{title}</div>
             <div>{price}</div>
         </div>

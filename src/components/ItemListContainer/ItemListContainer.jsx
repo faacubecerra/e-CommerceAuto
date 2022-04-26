@@ -17,7 +17,7 @@ const ItemListContainer = () => {
 
     return(
         <div>
-            {autos?.map(elem => <Item title={elem.title} price={elem.price} img={elem.img} stock={elem.stock} category={elem.category}/>)}
+            {autos?.map(elem => <Item title={elem.title} price={elem.price} img={elem.img} stock={elem.stock} category={elem.category} description={elem.description}/>)}
         </div>
     )
 }
