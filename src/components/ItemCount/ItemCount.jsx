@@ -19,14 +19,31 @@ const ItemCount = ({stock, initial, title, description, price}) => {
         }
     }
 
+    const isInCart = (data) => {
+        if(cartProducts.find(elem => elem.title == data)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     const onAdd = () => {
         setCartWidget(cartWidget + count)
-        setCartProducts([...cartProducts, {
-            title: title,
-            description: description,
-            price: price,
-            count: count
-        }])
+
+        if(isInCart(title)) {
+            cartProducts.map(elem => {
+                if(elem.title == title) {
+                    return elem.count = elem.count + count
+                }
+            })
+        } else {
+            setCartProducts([...cartProducts, {
+                title: title,
+                description: description,
+                price: price,
+                count: count
+            }])
+        }
     }
 
     return(

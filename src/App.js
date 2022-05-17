@@ -6,6 +6,7 @@ import ItemDetail from "./components/ItemDetail/ItemDetail";
 import { CartProvider } from "../src/components/CartContext/CartContext";
 import Cart from "./components/Cart/Cart";
 import ItemCategoryConteiner from "./components/ItemCategoryConteiner/ItemCategoryConteiner";
+import OrderForm from "./components/OrderForm/OrderForm";
 
   
   function App() {
@@ -21,6 +22,7 @@ import ItemCategoryConteiner from "./components/ItemCategoryConteiner/ItemCatego
             <Route path="/auto" element={<ItemCategoryConteiner category="auto"/>} />
             <Route path="/rueda" element={<ItemCategoryConteiner category="rueda"/>} />
             <Route path="/pintura" element={<ItemCategoryConteiner category="pintura"/>} />
+            <Route path="/orderform" element={<OrderForm/>} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
