@@ -10,7 +10,6 @@ const Cart = ()=>{
             {
                 cartProducts.map(elem => <ListCart title={elem.title} description={elem.description} price={elem.price} count={elem.count}/>)
             }
-            
         </div>
     )
 }
