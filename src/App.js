@@ -18,7 +18,7 @@ import OrderForm from "./components/OrderForm/OrderForm";
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
-            {<Route path="/item/:CategoryId/:productId" element={<ItemDetail />} />}
+            <Route path="/item/:productId" element={<ItemDetail />} />
             <Route path="/auto" element={<ItemCategoryConteiner category="auto"/>} />
             <Route path="/rueda" element={<ItemCategoryConteiner category="rueda"/>} />
             <Route path="/pintura" element={<ItemCategoryConteiner category="pintura"/>} />

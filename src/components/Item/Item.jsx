@@ -6,7 +6,7 @@ const Item = ({ title, price, img, stock, category, description, id }) => {
   console.log(img);
   return (
     <div>
-      <Link to={`item/${category}/${id}`}>
+      <Link to={`/item/${id}`}>
         <img src={img}></img>
       </Link>
       <ItemCount

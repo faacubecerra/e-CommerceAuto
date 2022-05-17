@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       });
       setProducts(products);
     });
-  }, [categoryId]);
+  }, []);
 
   console.log("products", products);
 
