@@ -1,38 +1,50 @@
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { getProducts } from "../../asyncmock"
-import { Link } from "react-router-dom"
-import '../ItemCount/ItemCount'
-import Cart from "../ItemCount/ItemCount"
+import React, { useEffect, useState } from "react";
+import {
+  getDocs,
+  collection,
+  query,
+  where,
+  doc,
+  getDoc,
+} from "firebase/firestore";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { firestoreDb } from "../../services/firebase";
+import "../ItemCount/ItemCount";
+import Cart from "../ItemCount/ItemCount";
 
 const ItemDetail = () => {
+  const { productId } = useParams();
+  console.log(productId);
+  const [autoView, setAutoView] = useState({});
 
-    const { idRef } = useParams()
+  useEffect(() => {
+    const getAuto = async () => {
+      const docRef = doc(firestoreDb, "products", productId);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setAutoView({ ...docSnap.data(), id: docSnap.id });
+      } else {
+        console.log("No se encuentra el producto");
+      }
+    };
+    getAuto();
+  }, [productId]);
 
-    const [autoView, setAutoView] = useState()
+  console.log(productId);
+  return (
+    <div>
+      <div>{autoView?.title}</div>
+      <img src={`../${autoView.img}`} />
+      <div>{autoView?.price}</div>
+      <div>{autoView?.category}</div>
+      <div>{autoView?.description}</div>
+      <Cart stock={autoView?.stock} initial={1} />
+      <Link to="/cart">
+        <button>TERMINAR COMPRA</button>
+      </Link>
+    </div>
+  );
+};
 
-    useEffect(() => {
-        getProducts().then(prods => {
-                setAutoView(prods.find(elem => elem.title == idRef.replace("-", " ")))
-        }).catch(error => {
-            console.log(error)
-        })
-    }, [])
-
-
-    return(
-        <div>
-            <div>{autoView?.title}</div>
-            <img src={autoView?.img}/>
-            <div>{autoView?.price}</div>
-            <div>{autoView?.category}</div>
-            <div>{autoView?.description}</div>
-            <Cart stock={autoView?.stock} initial={1}  />
-            <Link to= "/cart">
-                <button>TERMINAR COMPRA</button>
-            </Link>
-        </div>
-    )
-}
-
-export default ItemDetail
+export default ItemDetail;

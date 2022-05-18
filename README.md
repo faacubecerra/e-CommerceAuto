@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+##  ¡Bienvenido/a al repositorio oficial de mi proyecto de final de curso de Coderhouse: React Js!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### **Introducción**
 
-## Available Scripts
+Este proyecto nace de toda una cursada en Coderhouse y pretende usar la mayor cantidad de conceptos del framework de Javascript: React Js.
 
-In the project directory, you can run:
+Si desea ver el curso antes mencionado puede dar click [aquí](https://www.coderhouse.com/online/reactjs "Aquí").
 
-### `npm start`
+#### **¿De que consta el proyecto?**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La aplicación es un e-commerce simulando la venta de Vehiculos y modificaciones para los mismos, como lo son las llantas y las pinturas. Cuenta con la visualización de todas las unidades, filtro por categoría, detalle de cada producto y la posibilidad de comprar tanto individualmente como la cantidad que uno desee sin exceder el stock disponible, claro.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### **¿Por qué elegí ésta temática?**
 
-### `npm test`
+Al ser mi primer proyecto en React, pensé en darle un estilo propio y personal por encima de cualquier temática para sentirme más entusiasmado y motivado. Desde muy pequeño me hicieron fanatico de los motores y mientras mas crecia mas fanatico me volvia 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **¿Cómo inicializo el proyecto?**
 
-### `npm run build`
+Primero hay que instalar las dependencias necesarias. Para ello diríjase al directorio del proyecto y escriba el siguiente comando en el terminal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm install 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Hecho esto, para lanzar la aplicación en el localhost, escriba el siguiente comando en el terminal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    npm start
 
-### `npm run eject`
+Para abrirla, diríjase a [http://localhost:3000](http://localhost:3000) (por defecto, React usa el puerto 3000. En el caso que ya tenga una aplicación lanzada, este número podría variar)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Sobre mí
+Mi nombre es Facundo M. Becerra, soy desarrollador web Front-end, vivo en la ciudad de Rosario, Santa fe, Argentina.
