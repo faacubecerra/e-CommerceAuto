@@ -6,8 +6,7 @@ import ItemDetail from "./components/ItemDetail/ItemDetail";
 import { CartProvider } from "../src/components/CartContext/CartContext";
 import Cart from "./components/Cart/Cart";
 import ItemCategoryConteiner from "./components/ItemCategoryConteiner/ItemCategoryConteiner";
-import OrderForm from "./components/OrderForm/OrderForm";
-
+import OrderForm from "./components/OrderForm/OrderForm"
   
   function App() {
     return (
