@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from "../Item/Item";
+import './ItemListContainer.css'
 
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { firestoreDb } from "../../services/firebase";
@@ -33,7 +34,7 @@ const ItemListContainer = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       {products?.map((elem) => (
         <Item
           title={elem.title}

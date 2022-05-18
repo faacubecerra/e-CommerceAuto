@@ -1,11 +1,12 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import './Item.css'
 
 const Item = ({ title, price, img, stock, category, description, id }) => {
   console.log(img);
   return (
-    <div>
+    <div className="card">
       <Link to={`/item/${id}`}>
         <img src={img}></img>
       </Link>
